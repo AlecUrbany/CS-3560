@@ -27,31 +27,3 @@ abstract class Question
     //Checker for whether or not answer is valid.
     public abstract boolean isValidAnswer(List<String> choices);
 }
-//Specific type of question
-class MCQuestion extends Question
-{
-    public MCQuestion(List<String> submittedAnswers)
-    {
-        super("multiple-choice", submittedAnswers);
-    }
-
-    public boolean isValidAnswer(List<String> choices)
-    {
-        //Any combo is valid, so we can return true whenever.
-        return true;
-    }
-}
-//Specific type of question
-class SCQuestion extends Question
-{
-    public SCQuestion(List<String> submittedAnswers)
-    {
-        super("single-choice", submittedAnswers);
-    }
-
-    public boolean isValidAnswer(List<String> choices)
-    {
-        //Only one choice is allowed.
-        return choices.size() == 1;
-    }
-}
