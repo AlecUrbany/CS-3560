@@ -19,6 +19,7 @@ class SimulationDriver
         }
         else
         {
+            submittedAnswers = Arrays.asList("A", "B");
             question = question2;
         }
         System.out.println(question);

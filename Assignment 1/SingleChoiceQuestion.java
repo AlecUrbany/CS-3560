@@ -11,6 +11,13 @@ class SCQuestion extends Question
     public boolean isValidAnswer(List<String> choices)
     {
         //Only one choice is allowed.
-        return choices.size() == 1;
+        if (choices.size() == 1)
+        {
+            return true;
+        }
+        else
+        {
+            return choices.size() == 1;
+        }
     }
 }
