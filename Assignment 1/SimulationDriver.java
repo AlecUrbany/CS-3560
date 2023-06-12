@@ -1,4 +1,3 @@
-import utils;
 import java.util.*;
 
 //The driver for the simulation
@@ -8,7 +7,21 @@ class SimulationDriver
     {
         //Setting up the questions and answers.
         List<String> submittedAnswers = Arrays.asList("A", "B", "C", "D");
-        Question question = new MCQuestion(submittedAnswers);
+        Question question1 = new MCQuestion(submittedAnswers);
+        Question question2 = new SCQuestion(submittedAnswers);
+        //random question either mult choice or single choice
+        Random rand=new Random();
+        int x = rand.nextInt(2);
+        Question question;
+        if(x == 0)
+        {
+            question = question1;
+        }
+        else
+        {
+            question = question2;
+        }
+        System.out.println(question);
 
         //setting up the voting service
         VotingService votingService = new VotingService(question);

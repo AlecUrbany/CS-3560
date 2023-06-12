@@ -1,6 +1,6 @@
-import utils;
 import java.util.*;
 
+//Specific type of question
 class SCQuestion extends Question
 {
     public SCQuestion(List<String> submittedAnswers)
